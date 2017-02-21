@@ -30,6 +30,10 @@ public class UserService {
 	public void removeUsers(Long id) {
 		userRepostory.delete(id);
 	}
+	public User findOneUser(Long id) {
+		return userRepostory.findOne(id);
+		
+	}
 	
 
 }

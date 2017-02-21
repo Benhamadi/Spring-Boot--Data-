@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
@@ -16,7 +17,7 @@ public class Author extends User {
 	
 	//Composition =>l'existence de @Entity(Book) n'a de sens que si elle est en relation de @Entity(Author)
 	//Relation n:p
-	@ManyToMany(cascade={CascadeType.PERSIST, CascadeType.REMOVE} )
+	@ManyToMany(cascade={CascadeType.PERSIST, CascadeType.REMOVE} ,fetch=FetchType.LAZY)
 	private Collection<Book> books;
 
 	public String getRef() {
@@ -28,6 +29,7 @@ public class Author extends User {
 	}
 
 	public Collection<Book> getBooks() {
+		System.out.println("la collection books chargée à la demande aprés chaque appel de getBooks()");
 		return books;
 	}
 
@@ -37,7 +39,7 @@ public class Author extends User {
 	
 	@Override
 	public String toString() {
-		return "Author [id="+this.getId()+" name="+this.getName()+" , ref=" + ref + ", books=" + books + "]";
+		return "Author [id="+this.getId()+" name="+this.getName()+" , ref=" + ref + ", books=" + 0+ "]";
 	}
 	
 }

@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: spring-boot Maven Webapp
+Implementation-Title: Mediatheque
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: saadbenhamadi
 Implementation-Vendor-Id: github.saad

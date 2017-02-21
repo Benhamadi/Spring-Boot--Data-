@@ -68,4 +68,10 @@ public class UserController {
 		userService.addUsers(user);
 	}
 	
+	@RequestMapping(value="/{id}")
+	public User findOneUser(@PathVariable Long id ){
+		return userService.findOneUser(id);
+		
+	}
+	
 }

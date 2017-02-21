@@ -3,7 +3,7 @@
 	<artifactId>spring-boot</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot Maven Webapp</name>
+	<name>Mediatheque</name>
 	<url>http://maven.apache.org</url>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
